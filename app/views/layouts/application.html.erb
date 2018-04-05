@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Baomai</title>
+    <%= csrf_meta_tags %>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <script type="text/javascript">
+     $(function(){
+    var nowchecked = $('input[type=radio]#buyer:checked').val();
+    $('input[type=radio]#buyer').click(function(){
+        if($(this).val() == nowchecked) {
+            $(this).prop('checked', false);
+            nowchecked = false;
+        } else {
+            nowchecked = $(this).val();
+        }
+      });
+    });
+    </script>
+    
+     <script type="text/javascript">
+     $(function(){
+    var nowchecked = $('input[type=radio]#seller:checked').val();
+    $('input[type=radio]#seller').click(function(){
+        if($(this).val() == nowchecked) {
+            $(this).prop('checked', false);
+            nowchecked = false;
+        } else {
+            nowchecked = $(this).val();
+        }
+      });
+    });
+    </script>
+    
+  </head>
+
+  <body>
+     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
+        <div class="container">
+          <%= link_to root_path do %>
+            <span><%= image_tag 'icons/logo.png', class: 'navbar-brand' %></span>
+          <% end %>
+          <ul class="nav navbar-nav navbar-right">
+            <% if logged_in? %>
+              <li>
+                <%= link_to '#' do %>
+                  <%= image_tag 'icons/heart.png' %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to '#' do %>
+                  <%= image_tag 'icons/camera.png' %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to logout_path, method: :delete do %>
+                  <%= image_tag 'icons/logout.png' %>
+                <% end %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to new_user_path do %>
+                  <%= image_tag 'icons/register.png' %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to login_path do %>
+                  <%= image_tag 'icons/login.png' %>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>   
+    <% if flash[:notice] %>
+        <div class="alert alert-success">
+            <%= flash[:notice] %>
+        </div>
+    <% end %>
+    <% if flash[:alert] %>
+        <div class="alert alert-danger">
+            <%= flash[:alert] %>
+        </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<div class="users-mypage-wrapper">
+    <div class="users-mypage-container">
+        <div class="mypage-left">
+            <%= image_tag @user.image.url, width: '300px' %>
+        </div>
+        <div class="mypage-right">
+            <h3>名前</h3><%= @user.name %></br>
+            <h3>メールアドレス</h3><%= @user.email %>
+            <h3>プロフィール</h3><%= @user.profile %>
+            <%= link_to 'プロフィール変更', edit_user_path, class: 'btn btn-block btn-black' %>
+        </div>
+    </div>
+</div>

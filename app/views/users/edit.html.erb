@@ -1,0 +1,30 @@
+<div class="users-new-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4 users-new-container">
+                <h1 class="text-center text-white">会員情報の変更</h1>
+                <%= form_for @user do |f| %>
+                    <div class="form-group">
+                        <%= f.label :name, class: 'text-white' %>
+                        <%= f.text_field :name, class: "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :email, class: 'text-white' %>
+                        <%= f.text_field :email, class: "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :profile, class: 'text-white' %>
+                        <%= f.text_field :profile, class: "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :image %>
+                        <%= f.file_field :image %>
+                    </div>
+                    
+                    <%= f.submit "変更", class: 'btn btn-block btn-white' %>
+                <% end %>
+                <%= link_to '戻る', '#', class: 'text-white' %>
+            </div>
+        </div>
+    </div>
+</div>

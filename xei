@@ -1,0 +1,12 @@
+=> [32m#<User:0x00000004b66968[0m
+ id: [1;34m6[0m,
+ name: [31m[1;31m"[0m[31mtest8[1;31m"[0m[31m[0m,
+ email: [31m[1;31m"[0m[31mtest8[1;31m"[0m[31m[0m,
+ password: [1;36mnil[0m,
+ profile: [1;36mnil[0m,
+ admin_flag: [1;36mfalse[0m,
+ buyer_flag: [1;36mtrue[0m,
+ seller_flag: [1;36mfalse[0m,
+ created_at: [1;34;4mThu[0m, [1;34m29[0m [1;34;4mMar[0m [1;34m2018[0m [1;34m02[0m:[1;34m36[0m:[1;34m13[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+ updated_at: [1;34;4mThu[0m, [1;34m29[0m [1;34;4mMar[0m [1;34m2018[0m [1;34m02[0m:[1;34m36[0m:[1;34m13[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+ password_digest: [31m[1;31m"[0m[31m$2a$10$bg1Z9DQ4wygRW5YmfF3x/OJoKmVckVR7M45RCPYQ7lOElMrMI7gpO[1;31m"[0m[31m[0m[32m>[0m
