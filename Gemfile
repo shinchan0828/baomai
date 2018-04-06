@@ -61,3 +61,6 @@ gem 'pry-byebug'
 gem 'pry-stack_explorer'
 gem 'bcrypt'
 gem "carrierwave"
+gem 'devise'
+gem 'cancancan'
+gem 'rails_admin'

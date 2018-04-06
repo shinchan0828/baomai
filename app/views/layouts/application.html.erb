@@ -47,8 +47,8 @@
           <ul class="nav navbar-nav navbar-right">
             <% if logged_in? %>
               <li>
-                <%= link_to '#' do %>
-                  <%= image_tag 'icons/heart.png' %>
+                <%= link_to new_request_path(@curret_user) do %>
+                  <%= image_tag 'icons/newrequest.png' %>
                 <% end %>
               </li>
               <li>

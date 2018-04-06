@@ -3,5 +3,6 @@ class Request < ApplicationRecord
     validates :budget, presence: true
     validates :description, presence: true
     
-    belongs_to :users
+    belongs_to :user
+    has_many :requests
 end

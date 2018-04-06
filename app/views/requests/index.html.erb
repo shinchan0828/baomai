@@ -1,0 +1,20 @@
+<div class="request-index-wrapper">
+    <div class="container">
+        <% @requests.each do |request| %>
+        <div class="request-index-single">
+              <div class="request-index-username">
+                  <%= request.user.name %>
+              </div>
+              <div class="request-index-title">
+                  <%= request.title %>
+              </div>  
+              <div class="request-index-budget">
+                  <%= request.budget %>
+              </div>
+              <div class"request-index-description">
+                  <%= request.description %>
+              </div>
+          </div>
+          <% end %>
+    </div>
+</div>

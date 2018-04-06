@@ -110,3 +110,13 @@ h1, h2{
   font-size: 20px;
   background-color: rgba(0,0,0,0.0);
 }
+
+.request-index-wrapper {
+  padding-top: 70px;
+  .request-index-single {
+    padding: 20px auto 20px auto;
+    margin: 20px auto 20px auto;
+    background-color: #DDDDDD;
+  }
+  
+}
