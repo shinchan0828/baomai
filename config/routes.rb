@@ -7,7 +7,11 @@ Rails.application.routes.draw do
     :sessions => 'users/sessions',
   }
   #devise_for :users
-  resources 'users'
+  #resources 'users'
+  
+  get 'profile/:id' => 'users#new'
+  patch 'profile/:id' => 'users#update'
+  put 'profile/:id' => 'users#update'
   resources 'requests'
 
   #get '/login', to: 'sessions#new'

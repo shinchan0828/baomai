@@ -8,6 +8,8 @@ class SessionsController < ApplicationController
       log_in user 
       redirect_to root_path, notice: 'ログインに成功しました'
     else
+      logger.debug("エラー内容は下記")
+      logger.debug(@request.errors.messages)
       flash.now[:alert] = "ログインに失敗しました"
       render 'new'
     end
