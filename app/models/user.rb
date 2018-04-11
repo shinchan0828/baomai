@@ -20,11 +20,11 @@ class User < ApplicationRecord
     
     has_many :requests
     
-    before_save :check_instance
+    #before_save :check_instance
 
-    def check_instance
-      Rails.logger.debug(self.inspect)
-    end
+    #def check_instance
+    #  Rails.logger.debug(self.inspect)
+    #end
     
 end
 
